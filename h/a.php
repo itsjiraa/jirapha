@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>พิชญาณัฏฐ์ รินทร์วงค์ (อินเตอร์)</title>
+<title>จิราภา</title>
 </head>
 
 <body>
