@@ -2,28 +2,29 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>66010914135 จิราภา ไกรจันทร์ (อั่งเปา)</title>
+<title>สรอัฐ น้ำใส (กอฟ) </title>
 </head>
 
 <body>
-<h1>66010914135 จิราภา ไกรจันทร์ (อั่งเปา)</h1>
 
-<table border="1">
-<tr>
-	<td>Ordrer ID</td>
-    <td>ชื่อสินค้า</td>
-    <td>ประเภทสินค้า</td>
-    <td>วันที่</td>
-    <td>ประเทศ</td>
-    <td>จำนวนเงิน</td>
-    <td>รูปภาพ</td>
+<h1> สรอัฐ น้ำใส 66010914018 รายงานตัวแล้วครับจารย์ </h1>
+
+<table border="1">   
+<tr>    
+    <th>Order_ID</th>
+    <th>ชื่อสินค้า</th>
+    <th>ประเภทสินค้า</th>
+    <th>วันที่</th>
+    <th>ประเทศ</th>
+    <th>จำนวนเงิน</th>
+    
 </tr>
 
-<?php  
+<?php
 include_once("connectdb.php");
-$sql = "SELECT * FROM popsupermarket";
+$sql ="SELECT * FROM `popsupermarket`";
 $rs = mysqli_query($conn, $sql);
-while ($data = mysqli_fetch_array($rs)){
+while ($data = mysqli_fetch_array($rs)) {
 ?>
 <tr>
     <td><?php echo $data['p_order_id'];?></td>
@@ -31,12 +32,17 @@ while ($data = mysqli_fetch_array($rs)){
     <td><?php echo $data['p_category'];?></td>
     <td><?php echo $data['p_date'];?></td>
     <td><?php echo $data['p_country'];?></td>
-    <td align="right"><?php echo number_format($data['p_amount'],0);?> </td>
-    <td><img src="images/<?php echo $data['p_product_name'];?>.jpg" width="55"> </td>
+    <td align="right"><?php echo number_format($data['p_amount'],0);?></td>
+    <td> <img src="images/<?php echo $data['p_product_name'];?>.jpg" width="55"></td>
 </tr>
-<?php } ?>
+<?php } 
+mysqli_close($conn);
+?>
+
+
+
 </table>
 
-    
+
 </body>
 </html>
